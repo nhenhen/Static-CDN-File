@@ -16,7 +16,7 @@ document.querySelector('.container').appendChild(statusContainer);
 // 检查后端状态
 async function checkBackendStatus() {
     try {
-        const response = await fetch('http://127.0.0.1:5000/checkstatus');
+        const response = await fetch('https://tc.wex.ovh/checkstatus');
         if (response.ok) {
             statusContainer.textContent = '服务正常';
             statusContainer.style.display = 'block'; // Show status element
