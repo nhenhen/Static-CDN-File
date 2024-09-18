@@ -1,4 +1,4 @@
-const CHUNK_SIZE = 2 * 1024 * 1024; // 2MB per chunk
+﻿const CHUNK_SIZE = 2 * 1024 * 1024; // 2MB per chunk
 const MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB
 const MAX_FILES = 5; // 最多5张图片
 
@@ -51,7 +51,7 @@ async function uploadFileInChunks(file) {
         formData.append('filename', file.name);
 
         // 上传分片
-        const response = await fetch('http://127.0.0.1:5000/upload_chunk', {
+        const response = await fetch('https://tc.wex.ovh/upload_chunk', {
             method: 'POST',
             body: formData
         });
